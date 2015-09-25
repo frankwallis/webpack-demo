@@ -13,7 +13,7 @@ module.exports = {
     ],
     module: {
         loaders: [
-            { test: /\.js$/, loader: "babel", exclude: /node_modules/ },
+            { test: /\.jsx?$/, loader: "babel", exclude: /node_modules/ },
             { test: /\.css$/, loader: "style!css" },
             { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.eot$/, loader: "url" },
             { test: /\.html$/, loader: "html" }

@@ -8,7 +8,8 @@ var layoutRoute = {
         // these links populate the navbar
         this.links = [
             { name: "home", title: 'Home', icon: 'home', icon: 'fa fa-home' },
-            { name: "details", title: 'Details', icon: 'fa fa-ellipsis-h' }
+            { name: "details", title: 'Details', icon: 'fa fa-ellipsis-h' },
+            { name: "tweets", title: 'Tweets', icon: 'fa fa-ellipsis-h' }
         ];
     },
     synchronous: true
