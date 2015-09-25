@@ -131,7 +131,6 @@
     <Content Include="Built\main.bundle.js" />
     <Content Include="webpack.config.js" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="App\views\react\tweet-view.jsx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

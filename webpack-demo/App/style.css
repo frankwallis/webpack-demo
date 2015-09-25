@@ -6,29 +6,29 @@ body, html {
   font-family: 'Open Sans', sans-serif;
 }
 
-.App {
+.app {
   width: 800px;
   margin: 0 auto 20px auto;
 }
 
-.App-header {
+.app-header {
   border-bottom: 1px solid #eee;
 }
 
-.App h1 {
+.app h1 {
   display: inline-block;
 }
 
-.Nav {
+.nav {
   display: inline-block;
 }
 
-.Nav-item {
+.nav-item {
   list-style: none;
   display: inline-block;
 }
 
-.Nav-item a {
+.nav-item a {
   padding: 10px;
 }
 
