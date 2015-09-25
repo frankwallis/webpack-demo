@@ -5,13 +5,14 @@ A sample Visual Studio project using WebPack, Knockout, ES6, Babel, CherryTree a
 ## Running
 
 - Install NodeJS
+- Open a command prompt
 - Install webpack globally with `npm install -g webpack`
 - Clone the project with ```git clone https://github.com/frankwallis/webpack-demo.git```
-- Open a command prompt and `cd` into the project directory ```cd webpack-demo/webpack-demo```
-- On the command line, run `npm install`.
+- `cd` into the project directory ```cd webpack-demo/webpack-demo```
+- run `npm install`.
 - Run `webpack -w`
 
-- Open the solution Visual Studio
+- Open the solution in Visual Studio
 - Run the application
 
 ## Overview
