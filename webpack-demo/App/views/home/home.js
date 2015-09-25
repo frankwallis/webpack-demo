@@ -1,10 +1,6 @@
 ﻿import ko from "knockout";
 import homeTemplate from './home.html';
 
-let viewModel = ko.observable({
-    title: "Home"
-})
-
 let homeRoute = {
     path: "",
     viewModel: function() {
