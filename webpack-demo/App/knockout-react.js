@@ -1,6 +1,9 @@
 ﻿import ko from "knockout";
 import React from "react";
 
+/* 
+    Knockout binding handler which renders a React component.
+*/
 ko.bindingHandlers.reactComponent = {
     init: function (_, valueAccessor, __, ___, bindingContext) {
         return { controlsDescendantBindings: true }
