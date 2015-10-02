@@ -1,9 +1,12 @@
+﻿import * as ko from "knockout";
+
 //import layoutTemplate from './layout.html';
-var layoutTemplate = require('./layout.html');
+let layoutTemplate = require('./layout.html');
+
 var layoutRoute = {
     path: "/",
     template: layoutTemplate,
-    viewModel: function () {
+    viewModel: function() {
         // these links populate the navbar
         this.links = [
             { name: "home", title: 'Home', icon: 'fa fa-home' },
@@ -13,6 +16,5 @@ var layoutRoute = {
     },
     synchronous: true
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = layoutRoute;
-//# sourceMappingURL=layout.js.map
+
+export default layoutRoute;

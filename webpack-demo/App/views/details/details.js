@@ -1,13 +1,13 @@
-﻿import ko from "knockout";
-import detailsTemplate from './details.html';
-
-let detailsRoute = {
+//import detailsTemplate from './details.html';
+var detailsTemplate = require('./details.html');
+var detailsRoute = {
     path: "details",
-    viewModel: function() {
-        this.title = "Details"
+    viewModel: function () {
+        this.title = "Details";
     },
     template: detailsTemplate,
     synchronous: true
 };
-
-export default detailsRoute;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = detailsRoute;
+//# sourceMappingURL=details.js.map

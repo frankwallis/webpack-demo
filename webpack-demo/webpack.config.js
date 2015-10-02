@@ -3,7 +3,11 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
     context: path.join(__dirname, 'App'),
-    entry: './app.js',
+    entry: './app.ts',
+    // Currently we need to add '.ts' to resolve.extensions array.
+    resolve: {
+        extensions: ['', '.ts', '.tsx', '.webpack.js', '.web.js', '.js']
+    },
     output: {
         path: path.join(__dirname, 'Built'),
         filename: '[name].bundle.js'
@@ -14,6 +18,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.jsx?$/, loader: "babel", exclude: /node_modules/ },
+            { test: /\.tsx?$/, loader: "ts", exclude: /node_modules/ },
             { test: /\.css$/, loader: "style!css" },
             { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.eot$/, loader: "url" },
             { test: /\.html$/, loader: "html" }

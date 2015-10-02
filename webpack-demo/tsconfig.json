@@ -1,0 +1,13 @@
+﻿{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "jsx": "react"
+  },
+  "files": [
+    "typings/jquery/jquery.d.ts",
+    "typings/knockout/knockout.d.ts",
+    "typings/react/react.d.ts",
+    "App/cherrytree.d.ts"
+  ]
+}

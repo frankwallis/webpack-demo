@@ -1,13 +1,13 @@
-﻿import ko from "knockout";
-import homeTemplate from './home.html';
-
-let homeRoute = {
+//import homeTemplate from './home.html';
+var homeTemplate = require('./home.html');
+var homeRoute = {
     path: "",
-    viewModel: function() {
-      this.title = "home"  
+    viewModel: function () {
+        this.title = "home";
     },
     template: homeTemplate,
     synchronous: true
-}
-
-export default homeRoute;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = homeRoute;
+//# sourceMappingURL=home.js.map
