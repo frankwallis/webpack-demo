@@ -4,6 +4,7 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 module.exports = {
     context: path.join(__dirname, 'App'),
     entry: './app.ts',
+    devtool: 'source-map',
     // Currently we need to add '.ts' to resolve.extensions array.
     resolve: {
         extensions: ['', '.ts', '.tsx', '.webpack.js', '.web.js', '.js']

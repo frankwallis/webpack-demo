@@ -27,6 +27,14 @@ router.map((route) => {
 // add the transition handling middleware
 router.use(knockoutMiddleware);
 
+// add our custom middleware for dirty-checking
+router.use(function(transition, context) {
+	var route = transition.prev.routes[transition.prev.routes.length -1];
+	if (route && route.options.isdirty && route.options.isdirty()) {
+		alert('you have unsaved changes, please try again');
+		transition.abort();
+	} 
+});
 // start listening to browser's location bar changes
 router.listen();
 
