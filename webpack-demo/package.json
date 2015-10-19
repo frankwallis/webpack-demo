@@ -22,7 +22,7 @@
     "webpack-notifier": "^1.2.1"
   },
   "dependencies": {
-    "cherrytree": "2.0.0-alpha.12",
+    "cherrytree": "2.0.0-rc2",
     "cherrytree-for-knockout": "nathanboktae/cherrytree-for-knockout",
     "jquery": "^2.1.4",
     "knockout": "^3.3.0",

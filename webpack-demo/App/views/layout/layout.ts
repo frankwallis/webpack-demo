@@ -6,6 +6,7 @@ let layoutTemplate = require('./layout.html');
 var layoutRoute = {
     path: "/",
     template: layoutTemplate,
+    abstract: true,
     viewModel: function() {
         // these links populate the navbar
         this.links = [
