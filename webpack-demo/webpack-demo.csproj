@@ -120,20 +120,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App\cherrytree.d.ts" />
-    <TypeScriptCompile Include="App\knockout-react.ts" />
-    <Content Include="App\style.css" />
-    <Content Include="App\views\details\details.html" />
-    <TypeScriptCompile Include="App\views\details\details.ts" />
-    <Content Include="App\views\home\home.html" />
-    <TypeScriptCompile Include="App\views\home\home.ts" />
-    <Content Include="App\views\layout\layout.html" />
-    <TypeScriptCompile Include="App\views\layout\layout.ts" />
+    <Content Include="App\calculator.css" />
+    <Content Include="App\__tests__\calculator-store-tests.js" />
+    <Content Include="App\__tests__\calculator-tests.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="webpack.config.js" />
     <Content Include="package.json" />
-    <TypeScriptCompile Include="App\views\react\tweet-view.tsx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -143,9 +136,13 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <TypeScriptCompile Include="typings\jquery\jquery.d.ts" />
-    <TypeScriptCompile Include="typings\knockout\knockout.d.ts" />
+    <TypeScriptCompile Include="App\calculator-store.tsx" />
+    <TypeScriptCompile Include="App\calculator.tsx" />
+    <TypeScriptCompile Include="App\index.tsx" />
+    <TypeScriptCompile Include="App\_references.d.ts" />
+    <TypeScriptCompile Include="typings\react-dom\react-dom.d.ts" />
     <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -156,9 +153,6 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="App\app.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
