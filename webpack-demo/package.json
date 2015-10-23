@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --require ./test-environment.js App/**/__tests__/*.ts*",
     "bundle": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "version": "node -v"
   },
   "author": "",
   "license": "ISC",
