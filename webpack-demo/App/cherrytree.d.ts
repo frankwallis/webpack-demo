@@ -9,3 +9,11 @@ declare module 'cherrytree-for-knockout' {
 }
 
 declare var require: (name: string) => string;
+
+interface ICherrytreeRoute {
+    path: string;
+    viewModel();    
+    template: string | (() => string);
+    synchronous?: boolean
+    abstract?: boolean;
+}

@@ -35,7 +35,7 @@ export class TweetView extends React.Component<any,any> {
 	}
 }
 
-let tweetRoute = {
+let tweetRoute: ICherrytreeRoute = {
 	path: "tweets",
 	template: "<div data-bind='reactComponent: component'></div>",
     viewModel: function() {

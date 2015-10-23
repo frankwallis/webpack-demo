@@ -3,7 +3,7 @@
 //import detailsTemplate from './details.html';
 let detailsTemplate = require('./details.html');
 
-let detailsRoute = {
+let detailsRoute: ICherrytreeRoute = {
     path: "details",
     viewModel: function() {
         this.title = "Details";

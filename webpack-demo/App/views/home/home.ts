@@ -3,7 +3,7 @@
 //import homeTemplate from './home.html';
 let homeTemplate = require('./home.html');
 
-let homeRoute = {
+let homeRoute: ICherrytreeRoute = {
     path: "",
     viewModel: function() {
       this.title = "home"  

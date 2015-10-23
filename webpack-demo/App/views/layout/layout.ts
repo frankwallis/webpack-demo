@@ -3,7 +3,7 @@
 //import layoutTemplate from './layout.html';
 let layoutTemplate = require('./layout.html');
 
-var layoutRoute = {
+var layoutRoute: ICherrytreeRoute = {
     path: "/",
     template: layoutTemplate,
     abstract: true,
