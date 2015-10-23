@@ -1,11 +1,9 @@
 import * as React from "react";
-import * as chai from "chai";
+import {expect} from "chai";
 
 var TestUtils = require("react-addons-test-utils");
 
 import {Calculator} from "../calculator.tsx";
-
-var expect = chai.expect;
 
 describe('Calculator', () => {
 
@@ -34,7 +32,7 @@ describe('Calculator', () => {
     });
 
     it('handles add button click', () => {
-        let calculator = TestUtils.renderIntoDocument(React.createElement(Calculator));
+        let calculator = TestUtils.renderIntoDocument(<Calculator/>);
 
         let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
         let digit = digits[0];
@@ -53,7 +51,7 @@ describe('Calculator', () => {
     });
 
     it('handles clear button click', () => {
-        let calculator = TestUtils.renderIntoDocument(React.createElement(Calculator));
+        let calculator = TestUtils.renderIntoDocument(<Calculator/>);
 
         let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
         let digit = digits[0];

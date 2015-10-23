@@ -1,7 +1,5 @@
 import {CalculatorStore} from "../calculator-store";
-import * as chai from "chai";
-
-var expect = chai.expect;
+import {expect} from "chai";
 
 describe('CalculatorStore', () => {
 
