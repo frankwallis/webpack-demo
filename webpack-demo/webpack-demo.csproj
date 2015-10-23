@@ -121,10 +121,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\calculator.css" />
-    <Content Include="App\__tests__\calculator-store-tests.js" />
-    <Content Include="App\__tests__\calculator-tests.js" />
+    <TypeScriptCompile Include="App\__tests__\calculator-store-tests.ts" />
+    <TypeScriptCompile Include="App\__tests__\calculator-tests.tsx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="test-environment.js" />
     <Content Include="webpack.config.js" />
     <Content Include="package.json" />
     <Content Include="Web.config" />
@@ -140,6 +141,9 @@
     <TypeScriptCompile Include="App\calculator.tsx" />
     <TypeScriptCompile Include="App\index.tsx" />
     <TypeScriptCompile Include="App\_references.d.ts" />
+    <TypeScriptCompile Include="typings\assertion-error\assertion-error.d.ts" />
+    <TypeScriptCompile Include="typings\chai\chai.d.ts" />
+    <TypeScriptCompile Include="typings\mocha\mocha.d.ts" />
     <TypeScriptCompile Include="typings\react-dom\react-dom.d.ts" />
     <TypeScriptCompile Include="typings\react\react.d.ts" />
     <TypeScriptCompile Include="typings\tsd.d.ts" />
