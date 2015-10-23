@@ -9,65 +9,65 @@ var expect = chai.expect;
 
 describe('Calculator', () => {
 
-  it('initialises correctly', () => {
-      let calculator = TestUtils.renderIntoDocument(<Calculator/>);
-      let buttons = TestUtils.scryRenderedDOMComponentsWithTag(calculator, 'button');
-      expect(buttons.length).to.equal(12);
-      
-      let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
-      expect(operand.innerHTML).to.equal("0"); 
+    it('initialises correctly', () => {
+        let calculator = TestUtils.renderIntoDocument(<Calculator/>);
+        let buttons = TestUtils.scryRenderedDOMComponentsWithTag(calculator, 'button');
+        expect(buttons.length).to.equal(12);
 
-      let total = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-total');
-      expect(total.innerHTML).to.equal("0"); 
-  });
+        let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
+        expect(operand.innerHTML).to.equal("0");
 
-  it('handles digit clicks', () => {
-      let calculator = TestUtils.renderIntoDocument(<Calculator/>);
+        let total = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-total');
+        expect(total.innerHTML).to.equal("0");
+    });
 
-      let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
-      let digit = digits[0];
-      
-      TestUtils.Simulate.click(digit);
-      
-      let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
-      expect(operand.innerHTML).to.equal(digit.innerHTML); 
-  });
+    it('handles digit clicks', () => {
+        let calculator = TestUtils.renderIntoDocument(<Calculator/>);
 
-  it('handles add button click', () => {
-      let calculator = TestUtils.renderIntoDocument(React.createElement(Calculator));
+        let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
+        let digit = digits[0];
 
-      let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
-      let digit = digits[0];
-      
-      TestUtils.Simulate.click(digit);
+        TestUtils.Simulate.click(digit);
 
-      let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
-      expect(operand.innerHTML).to.equal(digit.innerHTML); 
+        let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
+        expect(operand.innerHTML).to.equal(digit.innerHTML);
+    });
 
-      let add = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-button-add');
-      TestUtils.Simulate.click(add);
-      
-      let total = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-total');
-      expect(total.innerHTML).to.equal(digit.innerHTML);       
-      expect(operand.innerHTML).to.equal("0"); 
-  });
+    it('handles add button click', () => {
+        let calculator = TestUtils.renderIntoDocument(React.createElement(Calculator));
 
-  it('handles clear button click', () => {
-      let calculator = TestUtils.renderIntoDocument(React.createElement(Calculator));
+        let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
+        let digit = digits[0];
 
-      let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
-      let digit = digits[0];
-      
-      TestUtils.Simulate.click(digit);
+        TestUtils.Simulate.click(digit);
 
-      let clear = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-button-clear');
-      TestUtils.Simulate.click(clear);
-      
-      let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
-      expect(operand.innerHTML).to.equal("0"); 
+        let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
+        expect(operand.innerHTML).to.equal(digit.innerHTML);
 
-      let total = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-total');
-      expect(total.innerHTML).to.equal("0");       
-  });
+        let add = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-button-add');
+        TestUtils.Simulate.click(add);
+
+        let total = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-total');
+        expect(total.innerHTML).to.equal(digit.innerHTML);
+        expect(operand.innerHTML).to.equal("0");
+    });
+
+    it('handles clear button click', () => {
+        let calculator = TestUtils.renderIntoDocument(React.createElement(Calculator));
+
+        let digits = TestUtils.scryRenderedDOMComponentsWithClass(calculator, 'adder-button-digit');
+        let digit = digits[0];
+
+        TestUtils.Simulate.click(digit);
+
+        let clear = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-button-clear');
+        TestUtils.Simulate.click(clear);
+
+        let operand = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-operand');
+        expect(operand.innerHTML).to.equal("0");
+
+        let total = TestUtils.findRenderedDOMComponentWithClass(calculator, 'adder-total');
+        expect(total.innerHTML).to.equal("0");
+    });
 
 });
