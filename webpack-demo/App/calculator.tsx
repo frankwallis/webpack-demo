@@ -53,23 +53,23 @@ export class Calculator extends React.Component<any, any> {
         let buttonrows = buttons.map((row, idx) => {
             return (
                 <div key={"row" + idx} className="adder-row">
-               {row}
-                    </div>
+                    {row}
+                </div>
             );
         });
 
         return (
             <div className="adder-container">
-            <div className="adder-row">
-               <span className="adder-operand adder-display">{this.calculatorStore.operand}</span>
+                <div className="adder-row">
+                   <span className="adder-operand adder-display">{this.calculatorStore.operand}</span>
                 </div>
 
-            <div className="adder-row">
-               <span className="adder-total adder-display">{this.calculatorStore.total}</span>
+                <div className="adder-row">
+                   <span className="adder-total adder-display">{this.calculatorStore.total}</span>
                 </div>
 
-            {buttonrows}
-                </div>
+                {buttonrows}
+            </div>
         );
     }
 }
