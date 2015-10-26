@@ -3,7 +3,10 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
     context: path.join(__dirname, 'App'),
-    entry: './index.tsx',
+    entry: {
+        client: './client.tsx',
+        server: './server.ts'
+    },
     devtool: 'source-map',
     // Currently we need to add '.ts' to resolve.extensions array.
     resolve: {
@@ -11,7 +14,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'Built'),
-        filename: '[name].bundle.js'
+        filename: 'bundle.[name].js'
     },
     plugins: [
       new WebpackNotifierPlugin()
@@ -21,7 +24,10 @@ module.exports = {
             { test: /\.tsx?$/, loader: "ts", exclude: /node_modules/ },
             { test: /\.css$/, loader: "style!css" },
             { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.eot$/, loader: "url" },
-            { test: /\.html$/, loader: "html" }
+            { test: /\.html$/, loader: "html" },
+            { test: require.resolve('react'), loader: 'expose?React' },
+            { test: /server.ts$/, loader: 'expose?Components!ts' },
+            { test: /client.tsx$/, loader: 'expose?Components!ts' }
         ]
     }
     
