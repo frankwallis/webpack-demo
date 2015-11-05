@@ -9,10 +9,9 @@
 
 </head>
 <body>
-    @Scripts.Render("~/Built/bundle.client.js")
     @Html.ReactInitJavaScript()
-
     @Html.React("Components.Calculator", new { });
 
+    @Scripts.Render("~/Built/bundle.client.js")
 </body>
 </html>
