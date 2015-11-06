@@ -31,6 +31,8 @@
     "webpack-notifier": "^1.2.1"
   },
   "dependencies": {
+    "es5-shim": "^4.2.0",
+    "html5shiv": "^3.7.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
   }

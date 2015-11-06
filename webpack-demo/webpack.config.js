@@ -6,7 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     context: path.join(__dirname, 'App'),
     entry: {
-        client: './client.tsx',
+        client: [ 'es5-shim', 'es5-shim/es5-sham', 'html5shiv', './client.tsx' ],
         server: './server.ts'
     },
     devtool: 'source-map',
