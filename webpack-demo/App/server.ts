@@ -1,1 +1,1 @@
-﻿export {Calculator} from './calculator.tsx';
+﻿export {Calculator} from './calculator';

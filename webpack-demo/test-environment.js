@@ -1,5 +1,6 @@
 ﻿// import typescript
 require('ts-node/register');
+require('css-modules-require-hook');
 
 // jsdom
 var jsdom = require('jsdom');

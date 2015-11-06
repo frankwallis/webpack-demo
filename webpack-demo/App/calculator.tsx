@@ -1,10 +1,8 @@
 import * as React from 'react';
 import {CalculatorStore} from "./calculator-store";
 
-if (process.env.__BROWSER__) {
-    var calcStyles = require("./calculator.css");
-    console.log(JSON.stringify(calcStyles, null, 3));
-}
+var calcStyles = require("./calculator.css");
+console.log(JSON.stringify(calcStyles, null, 3));
 
 export class Calculator extends React.Component<any, any> {
     constructor(props) {
