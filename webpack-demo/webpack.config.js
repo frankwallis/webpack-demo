@@ -1,5 +1,7 @@
 ﻿var path = require('path');
+var webpack = require('webpack');
 var WebpackNotifierPlugin = require('webpack-notifier');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, 'App'),
@@ -8,7 +10,6 @@ module.exports = {
         server: './server.ts'
     },
     devtool: 'source-map',
-    // Currently we need to add '.ts' to resolve.extensions array.
     resolve: {
         extensions: ['', '.ts', '.tsx', '.webpack.js', '.web.js', '.js']
     },
@@ -17,12 +18,18 @@ module.exports = {
         filename: 'bundle.[name].js'
     },
     plugins: [
-      new WebpackNotifierPlugin()
+      new WebpackNotifierPlugin(),
+      new webpack.DefinePlugin({
+          "process.env": {
+              "__BROWSER__": true
+          }
+      }),
+      new ExtractTextPlugin('bundle.[name].css', { allChunks: true }),
     ],
     module: {
         loaders: [
             { test: /\.tsx?$/, loader: "ts", exclude: /node_modules/ },
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss') },
             { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.eot$/, loader: "url" },
             { test: /\.html$/, loader: "html" },
             { test: require.resolve('react'), loader: 'expose?React' },
@@ -32,6 +39,3 @@ module.exports = {
     }
     
 };
-
-//debug: true,
-//    devtool: 'cheap-module-eval-source-map',

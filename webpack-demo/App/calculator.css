@@ -1,9 +1,13 @@
 
-.adder-container {
+.adderContainer {
 	font-size: 2rem;
 }
 
-.adder-display {
+.adderButtonRow {
+
+}
+
+.adderDisplay {
 	box-sizing: border-box;
 	border: solid 2px gray;
 	border-radius: .2em;
@@ -13,20 +17,31 @@
 	padding: 2px;
 }
 
-.adder-button {
+.adderOperand {
+    composes: adderDisplay;
+}
+
+.adderTotal {
+    composes: adderDisplay;
+}
+
+.adderButton {
 	font-size: 2rem;
 	width: 2em;
 	height: 2em;
 }
 
-.adder-button-clear {
+.adderButtonClear {
+    composes: adderButton;
 	background: orangered; 
 }
 
-.adder-button-add {
+.adderButtonAdd {
+    composes: adderButton;
 	background: mediumseagreen;
 }
 
-.adder-button-digit {
+.adderButtonDigit {
+    composes: adderButton;
 	background: dodgerblue;
 }

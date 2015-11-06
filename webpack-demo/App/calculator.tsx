@@ -1,6 +1,11 @@
 import * as React from 'react';
 import {CalculatorStore} from "./calculator-store";
 
+if (process.env.__BROWSER__) {
+    var calcStyles = require("./calculator.css");
+    console.log(JSON.stringify(calcStyles, null, 3));
+}
+
 export class Calculator extends React.Component<any, any> {
     constructor(props) {
         super(props);
@@ -25,7 +30,7 @@ export class Calculator extends React.Component<any, any> {
     }
 
     inputButton(digit: number) {
-        return <button className="adder-button adder-button-digit"
+        return <button className={calcStyles.adderButtonDigit}
             key={digit}
             onClick={() => this.input(digit) }>{digit}</button>;
     }
@@ -40,11 +45,11 @@ export class Calculator extends React.Component<any, any> {
 
         // add the bottom row
         buttons.push([
-            <button className="adder-button adder-button-add"
+            <button className={calcStyles.adderButtonAdd}
                 key="add"
                 onClick={() => this.add() }>+</button>,
             this.inputButton(0),
-            <button className="adder-button adder-button-clear"
+            <button className={calcStyles.adderButtonClear}
                 key="clear"
                 onClick={() => this.clear() }>c</button>
         ]);
@@ -52,20 +57,20 @@ export class Calculator extends React.Component<any, any> {
         // wrap with row divs
         let buttonrows = buttons.map((row, idx) => {
             return (
-                <div key={"row" + idx} className="adder-row">
+                <div key={"row" + idx} className={calcStyles.adderButtonRow}>
                     {row}
                 </div>
             );
         });
 
         return (
-            <div className="adder-container">
-                <div className="adder-row">
-                   <span className="adder-operand adder-display">{this.calculatorStore.operand}</span>
+            <div className={calcStyles.adderContainer}>
+                <div className={calcStyles.adderButtonRow}>
+                   <span className={calcStyles.adderOperand}>{this.calculatorStore.operand}</span>
                 </div>
 
-                <div className="adder-row">
-                   <span className="adder-total adder-display">{this.calculatorStore.total}</span>
+                <div className={calcStyles.adderButtonRow}>
+                   <span className={calcStyles.adderTotal}>{this.calculatorStore.total}</span>
                 </div>
 
                 {buttonrows}

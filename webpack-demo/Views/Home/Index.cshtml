@@ -6,12 +6,11 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    @Styles.Render("~/Built/bundle.client.css")
 </head>
 <body>
     @Html.ReactInitJavaScript()
-    @Html.React("Components.Calculator", new { });
-
+    @Html.React("Components.Calculator", new { })
     @Scripts.Render("~/Built/bundle.client.js")
 </body>
 </html>
